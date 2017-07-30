@@ -1,0 +1,77 @@
+<!DOCTYPE htmL>
+<html>
+<head>
+    <title>TrainTime</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!--Moment JS for date time functionality-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+    <script src="logic.js"></script>
+    
+    <div class="container">
+        
+        <div class="jumbotron" style="background-color:red; color: white">
+            <h1 class="text-center">Train's comin'</h1>
+            <h3 class="text-center">Gidde up!</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"></div>
+                        <h3 class="panel-title"><strong>Current Schedule</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover" id="trainTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Destination</th>
+                                <th>Average wait time</th>
+                                <th>Next Train</th>
+                                <th>Time till arrival</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                            </tbody>
+                    </table>
+            </div>
+
+        </div>
+        
+        <div class="row"></div>
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Add a Train</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="">Name of Train</label>
+                                <input type="text" class="form-control" name="trainNameInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Destination</label>
+                                <input type="text" class="form-control" name="destinationInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="">First Arrival Time (HH:mm)</label>
+                                <input type="text" class="form-control" name="firstArrivalInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Average wait time</label>
+                                <input type="text" class="form-control" name="waitInput">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit a train</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
